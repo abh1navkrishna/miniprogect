@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jobspot/checkemail.dart';
+import 'package:jobspot/dicription.dart';
 import 'package:jobspot/forgotpassword.dart';
 import 'package:jobspot/home%20screen.dart';
 import 'package:jobspot/login.dart';
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Homescreenn()
+      home: const Descriptionn()
     );
   }
 }

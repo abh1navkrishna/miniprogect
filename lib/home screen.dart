@@ -13,14 +13,11 @@ class _HomescreennState extends State<Homescreenn> {
   static const List<Widget> widgetoption = <Widget>[
     Text(
       'Home page',
-      style: TextStyle(fontWeight
-          : FontWeight.bold, fontSize: 35),
+      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
     ),
-
     Text(
       'Search page',
       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
-
     ),
   ];
 
@@ -29,6 +26,7 @@ class _HomescreennState extends State<Homescreenn> {
       selectedindex = index;
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -280,8 +278,9 @@ class _HomescreennState extends State<Homescreenn> {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 0,top: 100),
-                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    padding: const EdgeInsets.only(left: 0, top: 100),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Container(
                           width: 107,
@@ -289,7 +288,7 @@ class _HomescreennState extends State<Homescreenn> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               color: Colors.grey[200]),
-                          child:  Center(
+                          child: Center(
                             child: Text(
                               'Senior designer',
                               style: GoogleFonts.dmSans(
@@ -305,7 +304,7 @@ class _HomescreennState extends State<Homescreenn> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               color: Colors.grey[200]),
-                          child:  Center(
+                          child: Center(
                             child: Text(
                               'Full time',
                               style: GoogleFonts.dmSans(
@@ -321,7 +320,7 @@ class _HomescreennState extends State<Homescreenn> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               color: Colors.pink[50]),
-                          child:  Center(
+                          child: Center(
                             child: Text(
                               'Apply',
                               style: GoogleFonts.dmSans(
@@ -338,38 +337,59 @@ class _HomescreennState extends State<Homescreenn> {
               )),
         ),
       ]),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.only(top: 0),
-        child: BottomNavigationBar(
-          items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home_outlined,size: 30,), label: '', backgroundColor: Color(0xffA49EB5)),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.text_snippet_rounded,size: 30,),
-                label: '',
-                backgroundColor: Color(0xffA49EB5)),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.add,size: 30,),
-                label: '',
-                backgroundColor: Color(0xffA49EB5)),
-
-            BottomNavigationBarItem(
-                icon: Icon(Icons.messenger,size: 30,),
-                label: '',
-                backgroundColor: Colors.pink),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.drive_file_move_sharp,size: 30,),
-                label: '',
-                backgroundColor: Colors.pink),
-          ],
-          type: BottomNavigationBarType.fixed,
-          currentIndex: selectedindex,
-          selectedItemColor: Color(0xff0D0140),
-          iconSize: 40,
-          onTap: onitemtapped,
-          elevation: 5,
-        ),
-      ),
+      // bottomNavigationBar: Padding(
+      //   padding: const EdgeInsets.only(top: 0),
+      //   child: BottomNavigationBar(
+      //     items: const <BottomNavigationBarItem>[
+      //       BottomNavigationBarItem(
+      //
+      //         Image.asset("assets/Connection.png")
+      //           // icon: Icon(
+      //           //   Icons.home_outlined,
+      //           //   size: 30,
+      //           // ),
+      //           label: '',
+      //           backgroundColor: Color(0xffA49EB5)),
+      //       BottomNavigationBarItem(
+      //           icon: Icon(
+      //             Icons.text_snippet_rounded,
+      //             size: 30,
+      //           ),
+      //           label: '',
+      //           backgroundColor: Color(0xffA49EB5)),
+      //       BottomNavigationBarItem(
+      //           icon: Icon(
+      //             Icons.add,
+      //             size: 30,
+      //           ),
+      //           label: '',
+      //           backgroundColor: Color(0xffA49EB5)),
+      //       BottomNavigationBarItem(
+      //           icon: Icon(
+      //             Icons.messenger,
+      //             size: 30,
+      //           ),
+      //           label: '',
+      //           backgroundColor: Colors.pink),
+      //       BottomNavigationBarItem(
+      //           icon: Icon(
+      //             Icons.drive_file_move_sharp,
+      //             size: 30,
+      //           ),
+      //           label: '',
+      //           backgroundColor: Colors.pink),
+      //     ],
+      //     type: BottomNavigationBarType.fixed,
+      //     currentIndex: selectedindex,
+      //     selectedItemColor: Color(0xff0D0140),
+      //     iconSize: 40,
+      //     onTap: onitemtapped,
+      //     elevation: 5,
+      //   ),
+      // ),
+      // bottomNavigationBar: BottomAppBar(
+      //   child: Row(children: [SizedBox(height:24 ,width: 24,child: Image.asset("assets/Connection.png"),)]),
+      // ),
     );
   }
 }

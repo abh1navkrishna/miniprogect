@@ -78,6 +78,10 @@ flutter:
      - assets/homep4.png
      - assets/home5.png
      - assets/hnb2.png
+     - assets/Connection.png
+     - assets/Logo google (1).png
+     - assets/Map.png
+     - assets/Icon Locations.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
