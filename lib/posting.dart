@@ -176,7 +176,7 @@ class _PostinggState extends State<Postingg> {
                     color: Color(0xff130160)),
                 child: Center(
                   child: Text(
-                    'Posting',
+                    'My connection',
                     style: GoogleFonts.openSans(
                         fontWeight: FontWeight.w700,
                         fontSize: 14,

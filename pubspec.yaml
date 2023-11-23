@@ -103,6 +103,14 @@ flutter:
      - assets/Icon (5).png
      - assets/Ellipse 95 (1).png
      - assets/Icon eye.png
+     - assets/google 1.png
+     - assets/Dribbble logo.png
+     - assets/Twitter logo.png
+     - assets/facebook.png
+     - assets/microsoft 1.png
+     - assets/Image.png
+     - assets/Image (2).png
+     - assets/Add.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
