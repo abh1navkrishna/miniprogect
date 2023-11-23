@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/login.dart';
 
 class Spashscreenn extends StatefulWidget {
   const Spashscreenn({super.key});
@@ -62,7 +63,12 @@ class _SpashscreennState extends State<Spashscreenn> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 300),
-            child: Image.asset('assets/Group 76.png'),
+            child: InkWell(onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Loginn();
+              },));
+            },
+                child: Image.asset('assets/Group 76.png')),
           )
 
         ],

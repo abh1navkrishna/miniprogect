@@ -37,6 +37,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   google_fonts: ^6.1.0
+  dependency_validator: ^3.2.3
 
 dev_dependencies:
   flutter_test:
@@ -82,6 +83,26 @@ flutter:
      - assets/Logo google (1).png
      - assets/Map.png
      - assets/Icon Locations.png
+     - assets/Arrow 1.png
+     - assets/Background.png
+     - assets/Filter.png
+     - assets/Icon filter.png
+     - assets/Logo google (2).png
+     - assets/image 4.png
+     - assets/image 3.png
+     - assets/Back.png
+     - assets/Icon Design.png
+     - assets/Icond2.png
+     - assets/Icon.png
+     - assets/Icon (1).png
+     - assets/Icon (2).png
+     - assets/Icon (3).png
+     - assets/Icon (4).png
+     - assets/Illustrasi.png
+     - assets/Ellipse 95.png
+     - assets/Icon (5).png
+     - assets/Ellipse 95 (1).png
+     - assets/Icon eye.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

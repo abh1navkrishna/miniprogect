@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:jobspot/checkemail.dart';
+import 'package:jobspot/company.dart';
 import 'package:jobspot/dicription.dart';
 import 'package:jobspot/forgotpassword.dart';
 import 'package:jobspot/home%20screen.dart';
 import 'package:jobspot/login.dart';
 import 'package:jobspot/logo.dart';
+import 'package:jobspot/noresult.dart';
+import 'package:jobspot/posting.dart';
+import 'package:jobspot/search.dart';
 import 'package:jobspot/signup.dart';
 import 'package:jobspot/spashscreen.dart';
+import 'package:jobspot/specialization.dart';
 import 'package:jobspot/successfully.dart';
 
 void main() {
@@ -40,7 +45,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Descriptionn()
+      home: const Signupp()
     );
   }
 }

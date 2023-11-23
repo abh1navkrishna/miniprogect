@@ -50,14 +50,18 @@ class _SignuppState extends State<Signupp> {
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
             child: Container(
-                width: 350,
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white),
-                child: Center(
-                    child: Text(
-                        'Brandonelouis                                                                '))),
+              width: 350,
+              height: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.white,
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
           ),
 
           //=====================================================================================================
@@ -75,15 +79,19 @@ class _SignuppState extends State<Signupp> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-            child: Container(
-                width: 350,
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white),
-                child: Center(
-                    child: Text(
-                        'Brandonelouis@gmail.com                                          '))),
+            child:Container(
+              width: 350,
+              height: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.white,
+              ),
+              child: TextField(
+                decoration: InputDecoration(
+                  border: InputBorder.none,
+                ),
+              ),
+            ),
           ),
 
           //=====================================================================================================
@@ -100,24 +108,27 @@ class _SignuppState extends State<Signupp> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-            child: Container(
-                width: 350,
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    color: Colors.white),
-                child: Row(
-                  children: [
-                    Text(
-                      '............',
-                      style: TextStyle(fontSize: 40),
+            child: Stack(
+              children: [
+                Container(
+                  width: 350,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Colors.white,
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 180),
-                      child: Icon(CupertinoIcons.eye_slash),
-                    )
-                  ],
-                )),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 310, top: 13),
+                  child: Image.asset('assets/Icon eye.png'),
+                )
+              ],
+            )
           ),
 
           //====================================================================================================================
