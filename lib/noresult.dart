@@ -17,10 +17,9 @@ class _NoresulttState extends State<Noresultt> {
         leading: Image.asset('assets/Back.png'),
         backgroundColor: Colors.grey[200],
       ),
-      body: ListView(
-          children: [
+      body: ListView(children: [
         Padding(
-          padding: const EdgeInsets.only(left: 20,top: 20,right: 20),
+          padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
           child: Container(
               width: 350,
               height: 40,
@@ -37,29 +36,42 @@ class _NoresulttState extends State<Noresultt> {
               )),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 30),
-          child: Image.asset('assets/Illustrasi.png'),
+          padding: const EdgeInsets.only(top: 100),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset('assets/Illustrasi.png'),
+            ],
+          ),
         ),
-            Padding(
-              padding: const EdgeInsets.only(left: 121),
-              child: Text(
+        Padding(
+          padding: const EdgeInsets.only(top: 50),
+          child: Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
                 'No results found',
                 style: GoogleFonts.openSans(
                     fontWeight: FontWeight.w700,
                     fontSize: 16,
                     color: Color(0xff150B3D)),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(top: 20,left: 62),
-              child: Text(
+            ],
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 20),
+          child: Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
                 'The search could not be found, please check\n            spelling or write another word.',
                 style: GoogleFonts.openSans(
                     fontWeight: FontWeight.w400,
                     fontSize: 12,
                     color: Color(0xff524B6B)),
               ),
-            ),
+            ],
+          ),
+        ),
       ]),
     );
   }

@@ -111,6 +111,13 @@ flutter:
      - assets/Image.png
      - assets/Image (2).png
      - assets/Add.png
+     - assets/Illustration.png
+     - assets/Logo google (3).png
+     - assets/Rectangle 36.png
+     - assets/roundadd.png
+     - assets/Rectangle 36 (1).png
+     - assets/Rectangle 36 (2).png
+     - assets/Resume.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

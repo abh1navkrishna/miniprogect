@@ -43,7 +43,7 @@ class _DescriptionnState extends State<Descriptionn> {
               Padding(
                 padding: const EdgeInsets.only(top: 100),
                 child: Container(
-                  width: 400,
+                  width: double.infinity,
                   height: 114,
                   color: Color(0xffF3F2F2),
                   child: Padding(
@@ -100,8 +100,12 @@ class _DescriptionnState extends State<Descriptionn> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 41, left: 145),
-                child: Image.asset('assets/Logo google (1).png'),
+                padding: const EdgeInsets.only(top: 35),
+                child: Row(mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image.asset('assets/Logo google (1).png'),
+                  ],
+                ),
               )
             ]),
 
@@ -477,7 +481,7 @@ class _DescriptionnState extends State<Descriptionn> {
             ),
 
             Padding(
-              padding: const EdgeInsets.only(left: 20,top: 15),
+              padding: const EdgeInsets.only(left: 20, top: 15),
               child: Row(
                 children: [
                   CircleAvatar(
@@ -495,7 +499,7 @@ class _DescriptionnState extends State<Descriptionn> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20,top: 15),
+              padding: const EdgeInsets.only(left: 20, top: 15),
               child: Row(
                 children: [
                   CircleAvatar(
@@ -513,7 +517,7 @@ class _DescriptionnState extends State<Descriptionn> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20,top: 15),
+              padding: const EdgeInsets.only(left: 20, top: 15),
               child: Row(
                 children: [
                   CircleAvatar(
@@ -531,7 +535,7 @@ class _DescriptionnState extends State<Descriptionn> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20,top: 15),
+              padding: const EdgeInsets.only(left: 20, top: 15),
               child: Row(
                 children: [
                   CircleAvatar(
@@ -549,7 +553,7 @@ class _DescriptionnState extends State<Descriptionn> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20,top: 15),
+              padding: const EdgeInsets.only(left: 20, top: 15),
               child: Row(
                 children: [
                   CircleAvatar(
@@ -567,7 +571,7 @@ class _DescriptionnState extends State<Descriptionn> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20,top: 15),
+              padding: const EdgeInsets.only(left: 20, top: 15),
               child: Row(
                 children: [
                   CircleAvatar(
@@ -585,7 +589,7 @@ class _DescriptionnState extends State<Descriptionn> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 20,top: 15,bottom: 20),
+              padding: const EdgeInsets.only(left: 20, top: 15, bottom: 20),
               child: Row(
                 children: [
                   CircleAvatar(

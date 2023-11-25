@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/login.dart';
+import 'package:jobspot/successfully.dart';
 
 class Chackemaill extends StatefulWidget {
   const Chackemaill({super.key});
@@ -15,49 +17,70 @@ class _ChackemaillState extends State<Chackemaill> {
       backgroundColor: Colors.grey[200],
       body: ListView(children: [
         Padding(
-          padding: const EdgeInsets.only(top: 30, left: 67, bottom: 15),
-          child: Text(
-            'Check Your Email',
-            style:
-                GoogleFonts.dmSans(fontWeight: FontWeight.w700, fontSize: 30),
+          padding: const EdgeInsets.only(top: 94),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Check Your Email',
+                style: GoogleFonts.dmSans(
+                    fontWeight: FontWeight.w700, fontSize: 30),
+              ),
+            ],
           ),
         ),
 
         //============================================================================================================
 
-        Text(
-          '              Lorem ipsum dolor sit amet, consectetur adipiscing \n                                  elit, sed do eiusmod tempor',
-          style: GoogleFonts.dmSans(
-              fontWeight: FontWeight.w400,
-              fontSize: 12,
-              color: Color(0xff524B6B)),
+        Row(mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'We have sent the reset password to the email address\n                      brandonelouis@gmial.com',
+              style: GoogleFonts.dmSans(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  color: Color(0xff524B6B)),
+            ),
+          ],
         ),
 
         //============================================================================================================
 
-        Image.asset(
-          'assets/checkpass.png',
-          width: 100,
-          height: 200,
+        Padding(
+          padding: const EdgeInsets.only(top: 10),
+          child: Image.asset(
+            'assets/checkpass.png',
+            width: 100,
+            height: 200,
+          ),
         ),
 
         //=====================================================================================================
 
         Padding(
-          padding: const EdgeInsets.only(top: 30, left: 25, right: 25),
-          child: Container(
-            width: 300,
-            height: 53,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: Color(0xff130160)),
-            child: Center(
-              child: Text(
-                'OPEN YOUR EMAIL',
-                style: GoogleFonts.dmSans(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 15,
-                    color: Colors.white),
+          padding: const EdgeInsets.only(top: 40, left: 25, right: 25),
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return Successfullyy();
+                },
+              ));
+            },
+            child: Container(
+              width: 300,
+              height: 53,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: Color(0xff130160)),
+              child: Center(
+                child: Text(
+                  'OPEN YOUR EMAIL',
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                      color: Colors.white),
+                ),
               ),
             ),
           ),
@@ -67,19 +90,25 @@ class _ChackemaillState extends State<Chackemaill> {
 
         Padding(
           padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
-          child: Container(
-            width: 300,
-            height: 53,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: Color(0xffD6CDFE)),
-            child: Center(
-              child: Text(
-                'BACK TO LOGIN',
-                style: GoogleFonts.dmSans(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 15,
-                    color: Colors.white),
+          child: InkWell(onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return Loginn();
+            },));
+          },
+            child: Container(
+              width: 300,
+              height: 53,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: Color(0xffD6CDFE)),
+              child: Center(
+                child: Text(
+                  'BACK TO LOGIN',
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                      color: Colors.white),
+                ),
               ),
             ),
           ),
@@ -87,9 +116,8 @@ class _ChackemaillState extends State<Chackemaill> {
 
         //===================================================================================================
 
-        Padding(
-          padding: const EdgeInsets.only(left: 67),
-          child: Row(
+
+           Row(mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "You don't have an account yet?",
@@ -112,7 +140,6 @@ class _ChackemaillState extends State<Chackemaill> {
               )
             ],
           ),
-        ),
       ]),
     );
   }

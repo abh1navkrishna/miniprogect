@@ -31,30 +31,38 @@ class _SpashscreennState extends State<Spashscreenn> {
               height: 301,
             ),
           ),
+         Stack(children: [
+           Padding(
+             padding: const EdgeInsets.only(top: 35),
+             child: Text(
+               'Find Tour                   ',
+               style:
+               GoogleFonts.dmSans(fontSize: 40, fontWeight: FontWeight.w700),
+             ),
+           ),
+           Padding(
+             padding: const EdgeInsets.only(top: 70),
+             child: Text(
+               'Dream Job                ',
+               style: GoogleFonts.dmSans(
+                   fontSize: 40,
+                   fontWeight: FontWeight.w700,
+                   color: Color(0xffFCA34D),
+                   decoration: TextDecoration.underline,
+                   decorationColor: Color(0xffFCA34D)),
+             ),
+           ),
+           Padding(
+             padding: const EdgeInsets.only(top: 110),
+             child: Text(
+               'Here!                           ',
+               style:
+               GoogleFonts.dmSans(fontSize: 40, fontWeight: FontWeight.w700),
+             ),
+           ),
+         ],),
           Padding(
-            padding: const EdgeInsets.only(top: 35),
-            child: Text(
-              'Find Tour                   ',
-              style:
-                  GoogleFonts.dmSans(fontSize: 40, fontWeight: FontWeight.w700),
-            ),
-          ),
-          Text(
-            'Dream Job                ',
-            style: GoogleFonts.dmSans(
-                fontSize: 40,
-                fontWeight: FontWeight.w700,
-                color: Color(0xffFCA34D),
-                decoration: TextDecoration.underline,
-                decorationColor: Color(0xffFCA34D)),
-          ),
-          Text(
-            'Here!                           ',
-            style:
-                GoogleFonts.dmSans(fontSize: 40, fontWeight: FontWeight.w700),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(left: 14),
+            padding: const EdgeInsets.only(left: 14,top: 10),
             child: Text(
               'Explore all the most exciting job roles based on your interest and study major.',
               style:
@@ -62,7 +70,7 @@ class _SpashscreennState extends State<Spashscreenn> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 300),
+            padding: const EdgeInsets.only(left: 300,top: 20),
             child: InkWell(onTap: (){
               Navigator.push(context, MaterialPageRoute(builder: (context) {
                 return Loginn();

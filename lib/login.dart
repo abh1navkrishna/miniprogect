@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/forgotpassword.dart';
 import 'package:jobspot/home%20screen.dart';
 import 'package:jobspot/signup.dart';
 import 'package:jobspot/spashscreen.dart';
@@ -130,12 +131,18 @@ class _LoginnState extends State<Loginn> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 110),
-                    child: Text(
-                      'Forgot Password ?',
-                      style: GoogleFonts.dmSans(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                          color: Color(0xff0D0140)),
+                    child: InkWell(onTap: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Forgotpasswordd();
+                      },));
+                    },
+                      child: Text(
+                        'Forgot Password ?',
+                        style: GoogleFonts.dmSans(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 13,
+                            color: Color(0xff0D0140)),
+                      ),
                     ),
                   ),
                 ],

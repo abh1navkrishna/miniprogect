@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/forgotpassword.dart';
+import 'package:jobspot/login.dart';
 
 class Signupp extends StatefulWidget {
   const Signupp({super.key});
@@ -17,11 +19,11 @@ class _SignuppState extends State<Signupp> {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 30,left: 53),
+            padding: const EdgeInsets.only(top: 30, left: 53),
             child: Text(
               'Create an Accound',
               style:
-              GoogleFonts.dmSans(fontWeight: FontWeight.w700, fontSize: 30),
+                  GoogleFonts.dmSans(fontWeight: FontWeight.w700, fontSize: 30),
             ),
           ),
 
@@ -66,7 +68,6 @@ class _SignuppState extends State<Signupp> {
 
           //=====================================================================================================
 
-
           Padding(
             padding: const EdgeInsets.only(left: 20, top: 30),
             child: Text(
@@ -79,7 +80,7 @@ class _SignuppState extends State<Signupp> {
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-            child:Container(
+            child: Container(
               width: 350,
               height: 50,
               decoration: BoxDecoration(
@@ -107,29 +108,28 @@ class _SignuppState extends State<Signupp> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-            child: Stack(
-              children: [
-                Container(
-                  width: 350,
-                  height: 50,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white,
-                  ),
-                  child: TextField(
-                    decoration: InputDecoration(
-                      border: InputBorder.none,
+              padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
+              child: Stack(
+                children: [
+                  Container(
+                    width: 350,
+                    height: 50,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Colors.white,
+                    ),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        border: InputBorder.none,
+                      ),
                     ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 310, top: 13),
-                  child: Image.asset('assets/Icon eye.png'),
-                )
-              ],
-            )
-          ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 310, top: 13),
+                    child: Image.asset('assets/Icon eye.png'),
+                  )
+                ],
+              )),
 
           //====================================================================================================================
 
@@ -153,12 +153,21 @@ class _SignuppState extends State<Signupp> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 110),
-                  child: Text(
-                    'Forgot Password',
-                    style: GoogleFonts.dmSans(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 13,
-                        color: Color(0xff0D0140)),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return Forgotpasswordd();
+                        },
+                      ));
+                    },
+                    child: Text(
+                      'Forgot Password',
+                      style: GoogleFonts.dmSans(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13,
+                          color: Color(0xff0D0140)),
+                    ),
                   ),
                 ),
               ],
@@ -169,19 +178,28 @@ class _SignuppState extends State<Signupp> {
 
           Padding(
             padding: const EdgeInsets.only(top: 30, left: 64, right: 64),
-            child: Container(
-              width: 300,
-              height: 53,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(7),
-                  color: Color(0xff130160)),
-              child: Center(
-                child: Text(
-                  'LOGIN',
-                  style: GoogleFonts.dmSans(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 15,
-                      color: Colors.white),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return Loginn();
+                  },
+                ));
+              },
+              child: Container(
+                width: 300,
+                height: 53,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(7),
+                    color: Color(0xff130160)),
+                child: Center(
+                  child: Text(
+                    'LOGIN',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 15,
+                        color: Colors.white),
+                  ),
                 ),
               ),
             ),
@@ -197,18 +215,35 @@ class _SignuppState extends State<Signupp> {
                 Text(
                   "You don't have an account yet?",
                   style: GoogleFonts.dmSans(
-                      fontSize: 13, fontWeight: FontWeight.w400,color: Color(0xff524B6B)),
+                      fontSize: 13,
+                      fontWeight: FontWeight.w400,
+                      color: Color(0xff524B6B)),
                 ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    "Sign up",
-                    style: GoogleFonts.dmSans(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w400,
-                        decoration: TextDecoration.underline,
-                        decorationColor: Color(0xffFF9228),
-                        color: Color(0xffFF9228)),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(context, MaterialPageRoute(
+                      builder: (context) {
+                        return Signupp();
+                      },
+                    ));
+                  },
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return Signupp();
+                        },
+                      ));
+                    },
+                    child: Text(
+                      "Sign up",
+                      style: GoogleFonts.dmSans(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w400,
+                          decoration: TextDecoration.underline,
+                          decorationColor: Color(0xffFF9228),
+                          color: Color(0xffFF9228)),
+                    ),
                   ),
                 )
               ],

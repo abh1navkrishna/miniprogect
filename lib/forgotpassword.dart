@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/checkemail.dart';
+import 'package:jobspot/login.dart';
 
 class Forgotpasswordd extends StatefulWidget {
   const Forgotpasswordd({super.key});
@@ -56,32 +58,43 @@ class _ForgotpassworddState extends State<Forgotpasswordd> {
         Padding(
           padding: const EdgeInsets.only(left: 25, right: 20, top: 25),
           child: Container(
-              width: 350,
-              height: 50,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: Colors.white),
-              child: Center(
-                  child: Text(
-                      'Brandonelouis@gmail.com                                          '))),
+            width: 350,
+            height: 50,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: Colors.white,
+            ),
+            child: TextField(
+              decoration: InputDecoration(
+                border: InputBorder.none,
+              ),
+            ),
+          ),
         ),
 
         //=====================================================================================================
 
         Padding(
           padding: const EdgeInsets.only(top: 30, left: 25, right: 25),
-          child: Container(
-            width: 300,
-            height: 53,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: Color(0xff130160)),
-            child: Center(
-              child: Text(
-                'RESET PASSWORD',
-                style: GoogleFonts.dmSans(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 15,
-                    color: Colors.white),
+          child: InkWell(onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return Chackemaill();
+            },));
+          },
+            child: Container(
+              width: 300,
+              height: 53,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: Color(0xff130160)),
+              child: Center(
+                child: Text(
+                  'RESET PASSWORD',
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                      color: Colors.white),
+                ),
               ),
             ),
           ),
@@ -91,19 +104,25 @@ class _ForgotpassworddState extends State<Forgotpasswordd> {
 
         Padding(
           padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
-          child: Container(
-            width: 300,
-            height: 53,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(7),
-                color: Color(0xffD6CDFE)),
-            child: Center(
-              child: Text(
-                'BACK TO LOGIN',
-                style: GoogleFonts.dmSans(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 15,
-                    color: Colors.white),
+          child: InkWell(onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) {
+              return Loginn();
+            },));
+          },
+            child: Container(
+              width: 300,
+              height: 53,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(7),
+                  color: Color(0xffD6CDFE)),
+              child: Center(
+                child: Text(
+                  'BACK TO LOGIN',
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 15,
+                      color: Colors.white),
+                ),
               ),
             ),
           ),

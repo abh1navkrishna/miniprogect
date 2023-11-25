@@ -11,14 +11,7 @@ class Homescreenn extends StatefulWidget {
 class _HomescreennState extends State<Homescreenn> {
   int selectedindex = 0;
   static const List<Widget> widgetoption = <Widget>[
-    Text(
-      'Home page',
-      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
-    ),
-    Text(
-      'Search page',
-      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
-    ),
+
   ];
 
   void onitemtapped(int index) {
@@ -337,59 +330,38 @@ class _HomescreennState extends State<Homescreenn> {
               )),
         ),
       ]),
-      // bottomNavigationBar: Padding(
-      //   padding: const EdgeInsets.only(top: 0),
-      //   child: BottomNavigationBar(
-      //     items: const <BottomNavigationBarItem>[
-      //       BottomNavigationBarItem(
-      //
-      //         Image.asset("assets/Connection.png")
-      //           // icon: Icon(
-      //           //   Icons.home_outlined,
-      //           //   size: 30,
-      //           // ),
-      //           label: '',
-      //           backgroundColor: Color(0xffA49EB5)),
-      //       BottomNavigationBarItem(
-      //           icon: Icon(
-      //             Icons.text_snippet_rounded,
-      //             size: 30,
-      //           ),
-      //           label: '',
-      //           backgroundColor: Color(0xffA49EB5)),
-      //       BottomNavigationBarItem(
-      //           icon: Icon(
-      //             Icons.add,
-      //             size: 30,
-      //           ),
-      //           label: '',
-      //           backgroundColor: Color(0xffA49EB5)),
-      //       BottomNavigationBarItem(
-      //           icon: Icon(
-      //             Icons.messenger,
-      //             size: 30,
-      //           ),
-      //           label: '',
-      //           backgroundColor: Colors.pink),
-      //       BottomNavigationBarItem(
-      //           icon: Icon(
-      //             Icons.drive_file_move_sharp,
-      //             size: 30,
-      //           ),
-      //           label: '',
-      //           backgroundColor: Colors.pink),
-      //     ],
-      //     type: BottomNavigationBarType.fixed,
-      //     currentIndex: selectedindex,
-      //     selectedItemColor: Color(0xff0D0140),
-      //     iconSize: 40,
-      //     onTap: onitemtapped,
-      //     elevation: 5,
-      //   ),
-      // ),
-      // bottomNavigationBar: BottomAppBar(
-      //   child: Row(children: [SizedBox(height:24 ,width: 24,child: Image.asset("assets/Connection.png"),)]),
-      // ),
+      bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Color(0xff0D0140),
+        unselectedItemColor: Color(0xffA49EB5),
+        items: [
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage("assets/Rectangle 36.png")),
+            label: "",
+          ),
+          BottomNavigationBarItem(
+              icon: ImageIcon(AssetImage("assets/Connection.png")), label: ""),
+          BottomNavigationBarItem(
+              icon: (Icon(
+                Icons.add_circle,
+                color: Color(0xff130160),
+                size: 50,
+              )),
+              label: ""),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage('assets/Rectangle 36 (1).png')),
+            label: "",
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage('assets/Rectangle 36 (2).png')),
+            label: "",
+          ),
+        ],
+        type: BottomNavigationBarType.fixed,
+        currentIndex: selectedindex,
+        iconSize: 40,
+        onTap: onitemtapped,
+        elevation: 5,
+      ),
     );
   }
 }
