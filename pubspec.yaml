@@ -118,6 +118,24 @@ flutter:
      - assets/Rectangle 36 (1).png
      - assets/Rectangle 36 (2).png
      - assets/Resume.png
+     - assets/Edit.png
+     - assets/Write.png
+     - assets/Ellipse 48 (2).png
+     - assets/Ellipse 48 (1).png
+     - assets/Ellipse 48.png
+     - assets/Remove.png
+     - assets/Ellipse 48 (3).png
+     - assets/Ellipse 48 (4).png
+     - assets/unsplash_tAvpDE7fXgY.png
+     - assets/Edit Profile.png
+     - assets/Icon (11).png
+     - assets/Icon (6).png
+     - assets/Icon (7).png
+     - assets/Icon (8).png
+     - assets/Icon (9).png
+     - assets/Icon (10).png
+     - assets/Icon resume.png
+     - assets/Mask group (1).png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
