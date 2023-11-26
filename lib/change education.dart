@@ -246,7 +246,7 @@ class _ChangeeducationnState extends State<Changeeducationn> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 10, left: 25, right: 25),
+            padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
             child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 InkWell(onTap:(){

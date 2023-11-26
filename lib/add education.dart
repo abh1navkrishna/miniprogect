@@ -246,7 +246,7 @@ class _AddeducationnState extends State<Addeducationn> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(left: 81, right: 81, top: 10),
+            padding: const EdgeInsets.only(left: 81, right: 81, top: 20),
             child: InkWell(
               onTap: () {
                 click();
