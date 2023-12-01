@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/bottom%20navigation%20bar.dart';
+import 'package:jobspot/home%20screen.dart';
 
 class Uploadcvv extends StatefulWidget {
   const Uploadcvv({super.key});
@@ -14,10 +16,12 @@ class _UploadcvvState extends State<Uploadcvv> {
     return Scaffold(
       backgroundColor: Color(0xffF9F9F9),
       appBar: AppBar(
+        backgroundColor: Color(0xffF9F9F9),
+
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Icon(Icons.arrow_back),
+            // Icon(Icons.arrow_back),
             Icon(Icons.more_vert),
           ],
         ),
@@ -149,22 +153,29 @@ class _UploadcvvState extends State<Uploadcvv> {
         ),
       ]),
       bottomNavigationBar: BottomAppBar(
-          color: Color(0xffFFFFFFFF),
+          surfaceTintColor:Color(0xffF9F9F9),
+
           child: Padding(
             padding: const EdgeInsets.only(left: 20, right: 20),
-            child: Container(
-              width: 270,
-              height: 40,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Color(0xff130160)),
-              child: Center(
-                child: Text(
-                  'APPLY NOW',
-                  style: GoogleFonts.dmSans(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 14,
-                      color: Colors.white),
+            child: InkWell(onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Navigationbarr();
+              },));
+            },
+              child: Container(
+                width: 270,
+                height: 40,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Color(0xff130160)),
+                child: Center(
+                  child: Text(
+                    'APPLY NOW',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 14,
+                        color: Colors.white),
+                  ),
                 ),
               ),
             ),

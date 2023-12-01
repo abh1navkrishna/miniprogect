@@ -12,14 +12,16 @@ class _JobpositionnState extends State<Jobpositionn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Color(0xffF9F9F9),
       body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Row(
               children: [
-                Image.asset('assets/Back.png'),
+                InkWell(onTap: () {
+                  Navigator.pop(context);
+                },child: Image.asset('assets/Back.png')),
               ],
             ),
           ),
@@ -35,32 +37,29 @@ class _JobpositionnState extends State<Jobpositionn> {
           ),
           Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-              child: Stack(
-                children: [
-                  Container(
-                    width: 350,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.white,
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                          border: InputBorder.none,
-                          prefixIcon: Icon(Icons.search,color: Color(0xffAAA6B9),),
-                          hintText: 'Search',
-                          hintStyle: TextStyle(color: Color(0xffAAA6B9))),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 310, top: 10),
-                    child: Icon(
-                      Icons.close,
-                      size: 20,
-                    ),
-                  )
-                ],
-              )),
+              child: Container(
+                width: double.infinity,
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.white,
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                      border: InputBorder.none,
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: Color(0xffAAA6B9),
+                      ),
+                      hintText: 'Search',
+                      suffixIcon: Icon(
+                        Icons.close,
+                        color: Color(0xff150B3D),
+                        size: 20,
+                      ),
+                      hintStyle: TextStyle(color: Color(0xffAAA6B9))),
+                ),
+              ),),
           Padding(
             padding: const EdgeInsets.only(left: 20, top: 30),
             child: Text(

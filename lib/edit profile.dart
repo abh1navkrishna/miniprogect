@@ -1,5 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/Edit%20appreciation.dart';
+import 'package:jobspot/aboutme.dart';
+import 'package:jobspot/add%20appreciation.dart';
+import 'package:jobspot/add%20education.dart';
+import 'package:jobspot/add%20resume.dart';
+import 'package:jobspot/change%20education.dart';
+import 'package:jobspot/language.dart';
+import 'package:jobspot/my%20profile%20v1.dart';
+import 'package:jobspot/skill%208.dart';
 
 class Editprofilee extends StatefulWidget {
   const Editprofilee({super.key});
@@ -121,7 +130,11 @@ class _EditprofileeState extends State<Editprofilee> {
                           ),
                         ],
                       ),
-                      Image.asset('assets/Edit Profile.png')
+                      InkWell(onTap: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context) {
+                          return Myprofilev11();
+                        },));
+                      },child: Image.asset('assets/Edit Profile.png'))
                     ],
                   ),
                 )
@@ -131,7 +144,7 @@ class _EditprofileeState extends State<Editprofilee> {
 
           //======================================================================================================
           Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20,top: 15),
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
             child: Container(
                 width: double.infinity,
                 height: 164,
@@ -158,7 +171,12 @@ class _EditprofileeState extends State<Editprofilee> {
                               ),
                             ],
                           ),
-                          Image.asset('assets/Edit.png')
+                          InkWell(onTap: () {
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                              return Aboutmee();
+                            },));
+                          },
+                              child: Image.asset('assets/Edit.png'))
                         ],
                       ),
                     ),
@@ -334,14 +352,20 @@ class _EditprofileeState extends State<Editprofilee> {
                               ),
                             ],
                           ),
-                          CircleAvatar(
-                            radius: 12,
-                            child: Icon(
-                              Icons.add,
-                              color: Color(0xffFF9228),
-                              size: 20,
+                          InkWell(onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return Addeducationn();
+                            },));
+                          },
+                            child: CircleAvatar(
+                              radius: 12,
+                              child: Icon(
+                                Icons.add,
+                                color: Color(0xffFF9228),
+                                size: 20,
+                              ),
+                              backgroundColor: Colors.deepOrange[50],
                             ),
-                            backgroundColor: Colors.deepOrange[50],
                           )
                         ],
                       ),
@@ -368,7 +392,11 @@ class _EditprofileeState extends State<Editprofilee> {
                                 fontSize: 14,
                                 color: Color(0xff150B3D)),
                           ),
-                          Image.asset('assets/Edit.png')
+                          InkWell(onTap: () {
+                            Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                              return Changeeducationn();
+                            },));
+                          },child: Image.asset('assets/Edit.png'))
                         ],
                       ),
                     ),
@@ -450,7 +478,11 @@ class _EditprofileeState extends State<Editprofilee> {
                               ),
                             ],
                           ),
-                          Image.asset('assets/Edit.png')
+                          InkWell(onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return Skill88();
+                            },));
+                          },child: Image.asset('assets/Edit.png'))
                         ],
                       ),
                     ),
@@ -618,7 +650,11 @@ class _EditprofileeState extends State<Editprofilee> {
                               ),
                             ],
                           ),
-                          Image.asset('assets/Edit.png')
+                          InkWell(onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return Languagee();
+                            },));
+                          },child: Image.asset('assets/Edit.png'))
                         ],
                       ),
                     ),
@@ -647,7 +683,7 @@ class _EditprofileeState extends State<Editprofilee> {
                                 color: Color(0xffCBC9D4)),
                             child: Center(
                               child: Text(
-                                'Leadership',
+                                'English',
                                 style: GoogleFonts.dmSans(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 13,
@@ -663,7 +699,7 @@ class _EditprofileeState extends State<Editprofilee> {
                                 color: Color(0xffCBC9D4)),
                             child: Center(
                               child: Text(
-                                'Teamwork',
+                                'German',
                                 style: GoogleFonts.dmSans(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 13,
@@ -679,7 +715,7 @@ class _EditprofileeState extends State<Editprofilee> {
                                 color: Color(0xffCBC9D4)),
                             child: Center(
                               child: Text(
-                                'Visioner',
+                                'Spanish',
                                 style: GoogleFonts.dmSans(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 13,
@@ -704,7 +740,7 @@ class _EditprofileeState extends State<Editprofilee> {
                                 color: Color(0xffCBC9D4)),
                             child: Center(
                               child: Text(
-                                'Target oriented',
+                                'Mandarin',
                                 style: GoogleFonts.dmSans(
                                     fontWeight: FontWeight.w400,
                                     fontSize: 13,
@@ -722,7 +758,7 @@ class _EditprofileeState extends State<Editprofilee> {
                                   color: Color(0xffCBC9D4)),
                               child: Center(
                                 child: Text(
-                                  'Consistent',
+                                  'Italy',
                                   style: GoogleFonts.dmSans(
                                       fontWeight: FontWeight.w400,
                                       fontSize: 13,
@@ -771,21 +807,27 @@ class _EditprofileeState extends State<Editprofilee> {
                               ),
                             ],
                           ),
-                          CircleAvatar(
-                            radius: 12,
-                            child: Icon(
-                              Icons.add,
-                              color: Color(0xffFF9228),
-                              size: 20,
+                          InkWell(onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return Addappreciationn();
+                            },));
+                          },
+                            child: CircleAvatar(
+                              radius: 12,
+                              child: Icon(
+                                Icons.add,
+                                color: Color(0xffFF9228),
+                                size: 20,
+                              ),
+                              backgroundColor: Colors.deepOrange[50],
                             ),
-                            backgroundColor: Colors.deepOrange[50],
                           )
                         ],
                       ),
                     ),
                     Padding(
                       padding:
-                      const EdgeInsets.only(left: 20, right: 20, top: 20),
+                          const EdgeInsets.only(left: 20, right: 20, top: 20),
                       child: Container(
                         width: double.infinity,
                         height: 1,
@@ -794,7 +836,7 @@ class _EditprofileeState extends State<Editprofilee> {
                     ),
                     Padding(
                       padding:
-                      const EdgeInsets.only(left: 20, right: 20, top: 20),
+                          const EdgeInsets.only(left: 20, right: 20, top: 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -805,7 +847,11 @@ class _EditprofileeState extends State<Editprofilee> {
                                 fontSize: 14,
                                 color: Color(0xff150B3D)),
                           ),
-                          Image.asset('assets/Edit.png')
+                          InkWell(onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return Editappreciationn();
+                            },));
+                          },child: Image.asset('assets/Edit.png'))
                         ],
                       ),
                     ),
@@ -836,7 +882,6 @@ class _EditprofileeState extends State<Editprofilee> {
                                 fontSize: 12,
                                 color: Color(0xff524B6B)),
                           ),
-
                         ],
                       ),
                     ),
@@ -847,7 +892,8 @@ class _EditprofileeState extends State<Editprofilee> {
           //===========================================================================================================
 
           Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20, top: 10,bottom: 20),
+            padding:
+                const EdgeInsets.only(left: 20, right: 20, top: 10, bottom: 20),
             child: Container(
                 width: double.infinity,
                 height: 151,
@@ -869,7 +915,7 @@ class _EditprofileeState extends State<Editprofilee> {
                             children: [
                               Image.asset('assets/Icon (10).png'),
                               Text(
-                                '  Appreciation',
+                                '  Resume',
                                 style: GoogleFonts.dmSans(
                                     fontWeight: FontWeight.w700,
                                     fontSize: 14,
@@ -877,36 +923,40 @@ class _EditprofileeState extends State<Editprofilee> {
                               ),
                             ],
                           ),
-                          CircleAvatar(
-                            radius: 12,
-                            child: Icon(
-                              Icons.add,
-                              color: Color(0xffFF9228),
-                              size: 20,
+                          InkWell(onTap: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) {
+                              return Addresumee();
+                            },));
+                          },
+                            child: CircleAvatar(
+                              radius: 12,
+                              child: Icon(
+                                Icons.add,
+                                color: Color(0xffFF9228),
+                                size: 20,
+                              ),
+                              backgroundColor: Colors.deepOrange[50],
                             ),
-                            backgroundColor: Colors.deepOrange[50],
                           )
                         ],
                       ),
                     ),
                     Padding(
                       padding:
-                      const EdgeInsets.only(left: 20, right: 20, top: 20),
+                          const EdgeInsets.only(left: 20, right: 20, top: 20),
                       child: Container(
                         width: double.infinity,
                         height: 1,
                         color: Color(0xffDEE1E7),
                       ),
                     ),
-
-                   Padding(
-                     padding: const EdgeInsets.only(top: 20),
-                     child: Image.asset('assets/UX Designer.png'),
-                   )
+                    Padding(
+                      padding: const EdgeInsets.only(top: 20),
+                      child: Image.asset('assets/UX Designer.png'),
+                    )
                   ],
                 )),
           ),
-
         ],
       )),
     );

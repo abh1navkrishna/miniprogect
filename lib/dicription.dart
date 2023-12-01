@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/company.dart';
 
 class Descriptionn extends StatefulWidget {
   const Descriptionn({super.key});
@@ -12,28 +13,28 @@ class _DescriptionnState extends State<Descriptionn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
-        bottomNavigationBar: BottomAppBar(
-            color: Color(0xffFFFFFFFF),
-            child: Padding(
-              padding: const EdgeInsets.only(left: 40, right: 40),
-              child: Container(
-                width: 270,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Color(0xff130160)),
-                child: Center(
-                  child: Text(
-                    'APPLY NOW',
-                    style: GoogleFonts.dmSans(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 14,
-                        color: Colors.white),
-                  ),
-                ),
-              ),
-            )),
+        backgroundColor: Color(0xffF9F9F9),
+        // bottomNavigationBar: BottomAppBar(
+        //     color: Color(0xffFFFFFFFF),
+        //     child: Padding(
+        //       padding: const EdgeInsets.only(left: 40, right: 40),
+        //       child: Container(
+        //         width: 270,
+        //         height: 40,
+        //         decoration: BoxDecoration(
+        //             borderRadius: BorderRadius.circular(8),
+        //             color: Color(0xff130160)),
+        //         child: Center(
+        //           child: Text(
+        //             'APPLY NOW',
+        //             style: GoogleFonts.dmSans(
+        //                 fontWeight: FontWeight.w700,
+        //                 fontSize: 14,
+        //                 color: Colors.white),
+        //           ),
+        //         ),
+        //       ),
+        //     )),
 
         //======================================================================================================
 
@@ -606,6 +607,32 @@ class _DescriptionnState extends State<Descriptionn> {
                 ],
               ),
             ),
+
+            Padding(
+              padding: const EdgeInsets.only(left: 40, right: 40,bottom: 20),
+              child: InkWell(onTap: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                  return Companyy();
+                },));
+              },
+                child: Container(
+                  width: 270,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8),
+                      color: Color(0xff130160)),
+                  child: Center(
+                    child: Text(
+                      'APPLY NOW',
+                      style: GoogleFonts.dmSans(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 14,
+                          color: Colors.white),
+                    ),
+                  ),
+                ),
+              ),
+            )
           ],
         ));
   }

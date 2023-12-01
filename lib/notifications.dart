@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/create%20job%20or%20post.dart';
 
 class Notificationss extends StatefulWidget {
   const Notificationss({super.key});
@@ -15,7 +16,9 @@ class _NotificationssState extends State<Notificationss> {
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
           backgroundColor: Colors.grey[200],
-          leading: Image.asset('assets/Back.png'),
+          leading: InkWell(onTap: () {
+            Navigator.pop(context);
+          },child: Image.asset('assets/Back.png')),
           title: Padding(
             padding: const EdgeInsets.only(left: 250),
             child: Text(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/add%20education.dart';
 
 class Levelofeducationn extends StatefulWidget {
   const Levelofeducationn({super.key});
@@ -16,9 +17,13 @@ class _LevelofeducationnState extends State<Levelofeducationn> {
       appBar: AppBar(
           leading: Padding(
         padding: const EdgeInsets.only(bottom: 20),
-        child: ImageIcon(
-          AssetImage('assets/Back.png'),
-          color: Color(0xff524B6B),
+        child: InkWell(onTap:() {
+          Navigator.pop(context);
+        },
+          child: ImageIcon(
+            AssetImage('assets/Back.png'),
+            color: Color(0xff524B6B),
+          ),
         ),
       )),
       body: ListView(
@@ -35,34 +40,25 @@ class _LevelofeducationnState extends State<Levelofeducationn> {
           ),
           Padding(
               padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-              child: Stack(
-                children: [
-                  Container(
-                    width: 350,
-                    height: 40,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.white,
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        prefixIcon: Icon(
-                          Icons.search,
-                          color: Color(0xffAAA6B9),
-                        ),
-                      ),
+              child:
+              Container(
+                width: double.infinity,
+                height: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.white,
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    suffixIcon: Icon(Icons.close,size: 20,),
+                    prefixIcon: Icon(
+                      Icons.search,
+                      color: Color(0xffAAA6B9),
                     ),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 310, top: 10),
-                    child: Icon(
-                      Icons.close,
-                      size: 20,
-                    ),
-                  )
-                ],
-              )),
+                ),
+              ),),
 
           Padding(
             padding: const EdgeInsets.only(left: 20, top: 30),

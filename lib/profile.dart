@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'edit profile.dart';
+
 class Profilee extends StatefulWidget {
   const Profilee({super.key});
 
@@ -98,7 +100,16 @@ class _ProfileeState extends State<Profilee> {
                           ),
                         ],
                       ),
-                      Image.asset('assets/Edit Profile.png')
+                      InkWell(
+                          onTap: () {
+                            Navigator.pushReplacement(context,
+                                MaterialPageRoute(
+                              builder: (context) {
+                                return Editprofilee();
+                              },
+                            ));
+                          },
+                          child: Image.asset('assets/Edit Profile.png'))
                     ],
                   ),
                 )

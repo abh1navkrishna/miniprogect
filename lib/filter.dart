@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/specialization.dart';
 
 class Filterr extends StatefulWidget {
   const Filterr({super.key});
@@ -17,7 +18,11 @@ class _FilterrState extends State<Filterr> {
       appBar: AppBar(
         leading: Padding(
           padding: const EdgeInsets.only(bottom: 30),
-          child: Image.asset('assets/Back.png'),
+          child: InkWell(
+             onTap: () {
+               Navigator.pop(context);
+             },
+              child: Image.asset('assets/Back.png')),
         ),
         backgroundColor: Colors.grey[200],
         title: Padding(
@@ -40,35 +45,35 @@ class _FilterrState extends State<Filterr> {
                 color: Color(0xff150B3D)),
           ),
         ),
-        Stack(
-          children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 24, top: 25),
-              child: Container(
-                width: 343,
-                height: 50,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: Colors.white),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 30, top: 15),
-                  child: Text(
-                    'Design',
-                    style: GoogleFonts.dmSans(
-                        fontWeight: FontWeight.w400,
-                        fontSize: 13,
-                        color: Colors.black),
-                  ),
-                ),
+
+        Padding(
+          padding: const EdgeInsets.only(right: 25),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Icon(Icons.keyboard_arrow_up_outlined),
+            ],
+          ),
+        ),
+
+        Padding(
+          padding: const EdgeInsets.only(left: 24, top: 0, right: 24),
+          child: Container(
+            width: 343,
+            height: 50,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6), color: Colors.white),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 30, top: 15),
+              child: Text(
+                'UI/UX Design',
+                style: GoogleFonts.dmSans(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 13,
+                    color: Colors.black),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(
-                left: 350,
-              ),
-              child: Icon(Icons.keyboard_arrow_up_outlined),
-            )
-          ],
+          ),
         ),
 
         //==============================================================================================================
@@ -161,8 +166,9 @@ class _FilterrState extends State<Filterr> {
         ),
 
         Padding(
-          padding: const EdgeInsets.only(left: 20,top: 20,right: 20),
-          child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          padding: const EdgeInsets.only(left: 20, top: 20, right: 20),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
                 'Salary',
@@ -276,19 +282,24 @@ class _FilterrState extends State<Filterr> {
           color: Color(0xffFFFFFFFF),
           child: Padding(
             padding: const EdgeInsets.only(left: 40, right: 40),
-            child: Container(
-              width: 270,
-              height: 40,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  color: Color(0xff130160)),
-              child: Center(
-                child: Text(
-                  'APPLY NOW',
-                  style: GoogleFonts.dmSans(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 14,
-                      color: Colors.white),
+            child: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Container(
+                width: 270,
+                height: 50,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    color: Color(0xff130160)),
+                child: Center(
+                  child: Text(
+                    'APPLY NOW',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 14,
+                        color: Colors.white),
+                  ),
                 ),
               ),
             ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/filter.dart';
+import 'package:jobspot/search.dart';
 
 class Specializationn extends StatefulWidget {
   const Specializationn({super.key});
@@ -14,7 +16,11 @@ class _SpecializationnState extends State<Specializationn> {
     return Scaffold(
         backgroundColor: Colors.grey[200],
         appBar: AppBar(
-          leading: Image.asset('assets/Back.png'),
+          leading: InkWell(
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Image.asset('assets/Back.png')),
           backgroundColor: Colors.grey[200],
         ),
         body: ListView(
@@ -22,31 +28,43 @@ class _SpecializationnState extends State<Specializationn> {
             Padding(
               padding: const EdgeInsets.only(top: 10),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                      width: 280,
+                  Padding(
+                    padding: const EdgeInsets.only(left: 0, right: 20),
+                    child: Container(
+                        width: 280,
+                        height: 40,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.white,
+                        ),
+                        child: TextField(
+                          decoration: InputDecoration(
+                              prefixIcon:
+                                  Icon(Icons.search, color: Color(0xffAAA6B9)),
+                              hintText: 'Search',
+                              border: InputBorder.none,
+                              hintStyle: TextStyle(color: Color(0xffAAA6B9))),
+                        )),
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return Filterr();
+                        },
+                      ));
+                    },
+                    child: Container(
+                      width: 40,
                       height: 40,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Colors.white,
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xffFCA34D)),
+                      child: Center(
+                        child: Image.asset('assets/Icon filter.png'),
                       ),
-                      child: TextField(
-                        decoration: InputDecoration(
-                            prefixIcon:
-                                Icon(Icons.search, color: Color(0xffAAA6B9)),
-                            hintText: 'Search',
-                            border: InputBorder.none,
-                            hintStyle: TextStyle(color: Color(0xffAAA6B9))),
-                      )),
-                  Container(
-                    width: 40,
-                    height: 40,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Color(0xffFCA34D)),
-                    child: Center(
-                      child: Image.asset('assets/Icon filter.png'),
                     ),
                   ),
                 ],
@@ -223,7 +241,7 @@ class _SpecializationnState extends State<Specializationn> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top: 20,bottom: 20),
+              padding: const EdgeInsets.only(top: 20, bottom: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

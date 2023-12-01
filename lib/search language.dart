@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/add%20language.dart';
+import 'package:jobspot/language.dart';
 
 class Searchlanguagee extends StatefulWidget {
   const Searchlanguagee({super.key});
@@ -12,15 +14,18 @@ class _SearchlanguageeState extends State<Searchlanguagee> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Color(0xffF9F9F9),
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Color(0xffF9F9F9),
       appBar: AppBar(
           backgroundColor: Color(0xffF9F9F9),
           leading: Padding(
             padding: const EdgeInsets.only(bottom: 20),
-            child: ImageIcon(
-              AssetImage('assets/Back.png'),
-              color: Color(0xff524B6B),
+            child: InkWell(onTap: () {
+              Navigator.pop(context);
+            },
+              child: ImageIcon(
+                AssetImage('assets/Back.png'),
+                color: Color(0xff524B6B),
+              ),
             ),
           )),
       body: ListView(
@@ -36,7 +41,7 @@ class _SearchlanguageeState extends State<Searchlanguagee> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 20, right: 20),
+            padding: const EdgeInsets.only(left: 20, right: 20,top: 30),
             child: Container(
               width: 350,
               height: 40,
@@ -63,13 +68,14 @@ class _SearchlanguageeState extends State<Searchlanguagee> {
 
           //===========================================================================================================
           Padding(
-            padding: const EdgeInsets.only(left: 20,right: 20,top: 30),
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 30),
             child: Container(
               width: double.infinity,
               height: 48,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10), color: Colors.white),
-              child: ListTile( leading: Image.asset('assets/Rectangle 4 (1).png'),
+              child: ListTile(
+                leading: Image.asset('assets/Rectangle 4 (1).png'),
                 title: Padding(
                   padding: const EdgeInsets.only(bottom: 7),
                   child: Text(
@@ -79,30 +85,247 @@ class _SearchlanguageeState extends State<Searchlanguagee> {
                         fontSize: 12,
                         color: Color(0xff150B3D)),
                   ),
-                ),),
+                ),
+              ),
             ),
           ),
           //===========================================================================================================
           Padding(
-            padding: const EdgeInsets.only(left: 20,right: 20,top: 30),
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+            child: InkWell(onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) {
+                return Addlanguagee();
+              },));
+            },
+              child: Container(
+                width: double.infinity,
+                height: 48,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xffA993FF)),
+                child: ListTile(
+                  leading: Image.asset('assets/Rectangle 4.png'),
+                  title: Padding(
+                    padding: const EdgeInsets.only(bottom: 7),
+                    child: Text(
+                      'Indonesian',
+                      style: GoogleFonts.dmSans(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 12,
+                          color: Color(0xff150B3D)),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+          //===========================================================================================================
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
             child: Container(
               width: double.infinity,
               height: 48,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10), color: Color(0xffA993FF)),
-              child: ListTile( leading: Image.asset('assets/Rectangle 4.png'),
+                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: ListTile(
+                leading: Image.asset('assets/Rectangle 4 (2).png'),
                 title: Padding(
                   padding: const EdgeInsets.only(bottom: 7),
                   child: Text(
-                    'Indonesian',
+                    'Malaysian',
                     style: GoogleFonts.dmSans(
                         fontWeight: FontWeight.w700,
                         fontSize: 12,
                         color: Color(0xff150B3D)),
                   ),
-                ),),
+                ),
+              ),
             ),
-          )
+          ),
+
+          //===========================================================================================================
+
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+            child: Container(
+              width: double.infinity,
+              height: 48,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: ListTile(
+                leading: Image.asset('assets/Rectangle 5.png'),
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'English',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 12,
+                        color: Color(0xff150B3D)),
+                  ),
+                ),
+                trailing: Icon(Icons.check),
+              ),
+            ),
+          ),
+          //===========================================================================================================
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+            child: Container(
+              width: double.infinity,
+              height: 48,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: ListTile(
+                leading: Image.asset('assets/Rectangle 4 (8).png'),
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'French',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 12,
+                        color: Color(0xff150B3D)),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          //===========================================================================================================
+
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+            child: Container(
+              width: double.infinity,
+              height: 48,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: ListTile(
+                leading: Image.asset('assets/Rectangle 4 (4).png'),
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'German',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 12,
+                        color: Color(0xff150B3D)),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          //===========================================================================================================
+
+
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+            child: Container(
+              width: double.infinity,
+              height: 48,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: ListTile(
+                leading: Image.asset('assets/Rectangle 4 (5).png'),
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'Hindi',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 12,
+                        color: Color(0xff150B3D)),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          //===========================================================================================================
+
+
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+            child: Container(
+              width: double.infinity,
+              height: 48,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: ListTile(
+                leading: Image.asset('assets/Rectangle 4 (6).png'),
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'Italian',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 12,
+                        color: Color(0xff150B3D)),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          //===========================================================================================================
+
+
+
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+            child: Container(
+              width: double.infinity,
+              height: 48,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: ListTile(
+                leading: Image.asset('assets/Rectangle 4 (7).png'),
+                title: Padding(
+                  padding: const EdgeInsets.only(bottom: 7),
+                  child: Text(
+                    'Japanese',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 12,
+                        color: Color(0xff150B3D)),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          //===========================================================================================================
+
+
+          Padding(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15,bottom: 20),
+            child: Container(
+              width: double.infinity,
+              height: 48,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10), color: Colors.white),
+              child: ListTile(
+                leading: Image.asset('assets/Mask Group (2).png'),
+                title: Padding(
+                  padding: const EdgeInsets.only(top: 5),
+                  child: Text(
+                    'Korean',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 12,
+                        color: Color(0xff150B3D)),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          //===========================================================================================================
+
+
+
         ],
       ),
     );

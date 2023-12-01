@@ -13,9 +13,10 @@ class _MessageeState extends State<Messagee> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.grey[200],
+        backgroundColor: Color(0xffF9F9F9),
         appBar: AppBar(
-            backgroundColor: Colors.grey[200],
+            automaticallyImplyLeading: false,
+            backgroundColor: Color(0xffF9F9F9),
             title: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -23,13 +24,13 @@ class _MessageeState extends State<Messagee> {
                   children: [
                     Icon(
                       Icons.more_vert,
-                      color: Colors.grey[200],
+                      color: Color(0xffF9F9F9),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 10),
                       child: Icon(
                         Icons.home_outlined,
-                        color: Colors.grey[200],
+                        color: Color(0xffF9F9F9),
                       ),
                     )
                   ],
@@ -55,7 +56,8 @@ class _MessageeState extends State<Messagee> {
         body: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, top: 30,bottom: 20),
+              padding: const EdgeInsets.only(
+                  left: 20, right: 20, top: 30, bottom: 20),
               child: Container(
                 width: double.infinity,
                 height: 50,
@@ -173,7 +175,7 @@ class _MessageeState extends State<Messagee> {
             //llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
 
             Padding(
-              padding: const EdgeInsets.only(right: 20,top: 10,bottom: 10),
+              padding: const EdgeInsets.only(right: 20, top: 10, bottom: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [Image.asset('assets/Remove.png')],

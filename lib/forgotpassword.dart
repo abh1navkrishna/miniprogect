@@ -17,22 +17,32 @@ class _ForgotpassworddState extends State<Forgotpasswordd> {
       backgroundColor: Colors.grey[200],
       body: ListView(children: [
         Padding(
-          padding: const EdgeInsets.only(top: 30, left: 70, bottom: 15),
-          child: Text(
-            'Forgot Password',
-            style:
-                GoogleFonts.dmSans(fontWeight: FontWeight.w700, fontSize: 30),
+          padding: const EdgeInsets.only(top: 75),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Forgot Password?',
+                style: GoogleFonts.dmSans(
+                    fontWeight: FontWeight.w700, fontSize: 30),
+              ),
+            ],
           ),
         ),
 
         //============================================================================================================
 
-        Text(
-          '              Lorem ipsum dolor sit amet, consectetur adipiscing \n                                  elit, sed do eiusmod tempor',
-          style: GoogleFonts.dmSans(
-              fontWeight: FontWeight.w400,
-              fontSize: 12,
-              color: Color(0xff524B6B)),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'To reset your password, you need your email or mobile\n                number that can be authenticated',
+              style: GoogleFonts.dmSans(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  color: Color(0xff524B6B)),
+            ),
+          ],
         ),
 
         //============================================================================================================
@@ -76,11 +86,14 @@ class _ForgotpassworddState extends State<Forgotpasswordd> {
 
         Padding(
           padding: const EdgeInsets.only(top: 30, left: 25, right: 25),
-          child: InkWell(onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return Chackemaill();
-            },));
-          },
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return Chackemaill();
+                },
+              ));
+            },
             child: Container(
               width: 300,
               height: 53,
@@ -104,11 +117,14 @@ class _ForgotpassworddState extends State<Forgotpasswordd> {
 
         Padding(
           padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
-          child: InkWell(onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) {
-              return Loginn();
-            },));
-          },
+          child: InkWell(
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return Loginn();
+                },
+              ));
+            },
             child: Container(
               width: 300,
               height: 53,

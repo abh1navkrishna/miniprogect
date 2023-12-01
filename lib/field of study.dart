@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/add%20education.dart';
 
 class Fieldofstudyy extends StatefulWidget {
   const Fieldofstudyy({super.key});
@@ -16,9 +17,13 @@ class _FieldofstudyyState extends State<Fieldofstudyy> {
       appBar: AppBar(
           leading: Padding(
         padding: const EdgeInsets.only(bottom: 20),
-        child: ImageIcon(
-          AssetImage('assets/Back.png'),
-          color: Color(0xff524B6B),
+        child: InkWell(onTap: () {
+          Navigator.pop(context);
+        },
+          child: ImageIcon(
+            AssetImage('assets/Back.png'),
+            color: Color(0xff524B6B),
+          ),
         ),
       )),
       body: ListView(

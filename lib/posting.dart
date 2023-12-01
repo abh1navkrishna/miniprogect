@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/my%20connection.dart';
 
 class Postingg extends StatefulWidget {
   const Postingg({super.key});
@@ -13,7 +14,7 @@ class _PostinggState extends State<Postingg> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
+      backgroundColor: Color(0xffF9F9F9),
       body: ListView(children: [
         Padding(
           padding: const EdgeInsets.only(left: 20),
@@ -28,11 +29,11 @@ class _PostinggState extends State<Postingg> {
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(left: 20, top: 10),
+          padding: const EdgeInsets.only(left: 20, top: 10, right: 20),
           child: Stack(
             children: [
               Container(
-                width: 350,
+                width: double.infinity,
                 height: 289,
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -90,55 +91,59 @@ class _PostinggState extends State<Postingg> {
               Padding(
                 padding: const EdgeInsets.only(top: 224),
                 child: Container(
-                  width: 350,
+                  width: double.infinity,
                   height: 64,
                   decoration: BoxDecoration(
                       color: Color(0xffd5d3e0),
                       borderRadius: BorderRadius.only(
                           bottomRight: Radius.circular(20),
                           bottomLeft: Radius.circular(20))),
-                  child: Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Icon(
-                        Icons.favorite,
-                        size: 27,
-                        color: Color(0xffFF4D46),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.favorite,
+                            size: 27,
+                            color: Color(0xffFF4D46),
+                          ),
+                          Text(
+                            '  12   ',
+                            style: GoogleFonts.openSans(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                                color: Color(0xff6F6B80)),
+                          ),
+                          Icon(
+                            Icons.messenger_outline,
+                            size: 27,
+                            color: Color(0xff6F6B80),
+                          ),
+                          Text(
+                            '  10',
+                            style: GoogleFonts.openSans(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                                color: Color(0xff6F6B80)),
+                          ),
+                        ],
                       ),
-                    ),
-                    Text(
-                      '  12',
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                          color: Color(0xff6F6B80)),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Icon(
-                        Icons.messenger_outline,
-                        size: 27,
-                        color: Color(0xff6F6B80),
-                      ),
-                    ),
-                    Text(
-                      '  10',
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                          color: Color(0xff6F6B80)),
-                    ),
-                    Padding(
-                        padding: const EdgeInsets.only(left: 140),
-                        child: Image.asset('assets/Icon (5).png')),
-                    Text(
-                      '  2',
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                          color: Color(0xff6F6B80)),
-                    ),
-                  ]),
+                      Row(
+                        children: [
+                          Image.asset('assets/Icon (5).png'),
+                          Text(
+                            '  2',
+                            style: GoogleFonts.openSans(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 13,
+                                color: Color(0xff6F6B80)),
+                          ),
+                        ],
+                      )
+                    ]),
+                  ),
                 ),
               )
             ],
@@ -168,19 +173,28 @@ class _PostinggState extends State<Postingg> {
                   ),
                 ),
               ),
-              Container(
-                width: 162,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: Color(0xff130160)),
-                child: Center(
-                  child: Text(
-                    'My connection',
-                    style: GoogleFonts.openSans(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 14,
-                        color: Color(0xffD6CDFE)),
+              InkWell(
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return Myconnectionn();
+                    },
+                  ));
+                },
+                child: Container(
+                  width: 162,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      color: Color(0xff130160)),
+                  child: Center(
+                    child: Text(
+                      'My connection',
+                      style: GoogleFonts.openSans(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 14,
+                          color: Color(0xffD6CDFE)),
+                    ),
                   ),
                 ),
               )
@@ -191,11 +205,11 @@ class _PostinggState extends State<Postingg> {
         //ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
 
         Padding(
-          padding: const EdgeInsets.only(left: 20, top: 15),
+          padding: const EdgeInsets.only(left: 20, top: 15, right: 20),
           child: Stack(
             children: [
               Container(
-                width: 350,
+                width: double.infinity,
                 height: 289,
                 decoration: BoxDecoration(
                     color: Colors.white,
@@ -263,57 +277,62 @@ class _PostinggState extends State<Postingg> {
               Padding(
                 padding: const EdgeInsets.only(top: 224),
                 child: Container(
-                  width: 350,
+                  width: double.infinity,
                   height: 64,
                   decoration: BoxDecoration(
                       color: Color(0xffd5d3e0),
                       borderRadius: BorderRadius.only(
                           bottomRight: Radius.circular(20),
                           bottomLeft: Radius.circular(20))),
-                  child: Row(children: [
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Icon(
-                        Icons.favorite,
-                        size: 27,
-                        color: Color(0xffFF4D46),
-                      ),
-                    ),
-                    Text(
-                      '  12',
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                          color: Color(0xff6F6B80)),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 20),
-                      child: Icon(
-                        Icons.messenger_outline,
-                        size: 27,
-                        color: Color(0xff6F6B80),
-                      ),
-                    ),
-                    Text(
-                      '  10',
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                          color: Color(0xff6F6B80)),
-                    ),
-                    Padding(
-                        padding: const EdgeInsets.only(left: 140),
-                        child: Image.asset('assets/Icon (5).png')),
-                    Text(
-                      '  2',
-                      style: GoogleFonts.openSans(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 13,
-                          color: Color(0xff6F6B80)),
-                    ),
-                  ]),
+                  child:Padding(
+                    padding: const EdgeInsets.only(left: 20,right: 20),
+                    child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.favorite,
+                                size: 27,
+                                color: Color(0xffFF4D46),
+                              ),
+                              Text(
+                                '  12   ',
+                                style: GoogleFonts.openSans(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 13,
+                                    color: Color(0xff6F6B80)),
+                              ),
+                              Icon(
+                                Icons.messenger_outline,
+                                size: 27,
+                                color: Color(0xff6F6B80),
+                              ),
+                              Text(
+                                '  10',
+                                style: GoogleFonts.openSans(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 13,
+                                    color: Color(0xff6F6B80)),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            children: [
+                              Image.asset('assets/Icon (5).png'),
+                              Text(
+                                '  2',
+                                style: GoogleFonts.openSans(
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 13,
+                                    color: Color(0xff6F6B80)),
+                              ),
+                            ],
+                          )
+                        ]),
+                  ),
                 ),
-              )
+                ),
+
             ],
           ),
         ),

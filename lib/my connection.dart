@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/tabbar.dart';
 
 class Myconnectionn extends StatefulWidget {
   const Myconnectionn({super.key});
@@ -15,18 +16,24 @@ class _MyconnectionnState extends State<Myconnectionn> {
       backgroundColor: Colors.grey[200],
       body: ListView(children: [
         Padding(
-          padding: const EdgeInsets.only(),
+          padding: const EdgeInsets.only(top: 20),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Stack(
                 children: [
-                  Container(
-                    height: 191,
-                    width: 160,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Colors.white),
+                  InkWell(onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return Tabbarr();
+                    },));
+                  },
+                    child: Container(
+                      height: 191,
+                      width: 160,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: Colors.white),
+                    ),
                   ),
                   Padding(
                       padding: const EdgeInsets.only(top: 25, left: 55),
@@ -392,19 +399,23 @@ class _MyconnectionnState extends State<Myconnectionn> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
-                width: 162,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(6),
-                    color: Color(0xffD6CDFE)),
-                child: Center(
-                  child: Text(
-                    'Posting',
-                    style: GoogleFonts.openSans(
-                        fontWeight: FontWeight.w700,
-                        fontSize: 14,
-                        color: Color(0xff130160)),
+              InkWell(onTap: () {
+                Navigator.pop(context);
+              },
+                child: Container(
+                  width: 162,
+                  height: 40,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(6),
+                      color: Color(0xffD6CDFE)),
+                  child: Center(
+                    child: Text(
+                      'Posting',
+                      style: GoogleFonts.openSans(
+                          fontWeight: FontWeight.w700,
+                          fontSize: 14,
+                          color: Color(0xff130160)),
+                    ),
                   ),
                 ),
               ),

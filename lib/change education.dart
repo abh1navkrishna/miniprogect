@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'edit profile.dart';
+
 class Changeeducationn extends StatefulWidget {
   const Changeeducationn({super.key});
 
@@ -19,14 +21,22 @@ class _ChangeeducationnState extends State<Changeeducationn> {
             padding: const EdgeInsets.only(left: 20),
             child: Row(
               children: [
-                Image.asset('assets/Back.png'),
+                InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(
+                        builder: (context) {
+                          return Editprofilee();
+                        },
+                      ));
+                    },
+                    child: Image.asset('assets/Back.png')),
               ],
             ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 20, top: 30),
             child: Text(
-              'Add Education',
+              'Change Education',
               style: GoogleFonts.dmSans(
                   fontWeight: FontWeight.w700,
                   fontSize: 16,
@@ -46,19 +56,25 @@ class _ChangeeducationnState extends State<Changeeducationn> {
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
             child: Container(
-                width: 335,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(color: Color(0xffD3D1D1FF), blurRadius: 18)
-                    ]),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                  ),
-                )),
+              width: 335,
+              height: 40,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(color: Color(0xffD3D1D1FF), blurRadius: 18)
+                  ]),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20, top: 10),
+                child: Text(
+                  'Bachelor of Information Technology',
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      color: Color(0xff524B6B)),
+                ),
+              ),
+            ),
           ),
 //========================================================================================================
 
@@ -75,19 +91,25 @@ class _ChangeeducationnState extends State<Changeeducationn> {
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
             child: Container(
-                width: 335,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(color: Color(0xffD3D1D1FF), blurRadius: 18)
-                    ]),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                  ),
-                )),
+              width: 335,
+              height: 40,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(color: Color(0xffD3D1D1FF), blurRadius: 18)
+                  ]),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20, top: 10),
+                child: Text(
+                  'University of Oxford',
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      color: Color(0xff524B6B)),
+                ),
+              ),
+            ),
           ),
 //========================================================================================================
 
@@ -104,19 +126,25 @@ class _ChangeeducationnState extends State<Changeeducationn> {
           Padding(
             padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
             child: Container(
-                width: 335,
-                height: 40,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8),
-                    color: Colors.white,
-                    boxShadow: [
-                      BoxShadow(color: Color(0xffD3D1D1FF), blurRadius: 18)
-                    ]),
-                child: TextField(
-                  decoration: InputDecoration(
-                    border: InputBorder.none,
-                  ),
-                )),
+              width: 335,
+              height: 40,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(8),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(color: Color(0xffD3D1D1FF), blurRadius: 18)
+                  ]),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 20, top: 10),
+                child: Text(
+                  'Information Technology',
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      color: Color(0xff524B6B)),
+                ),
+              ),
+            ),
           ),
 //========================================================================================================
 
@@ -128,7 +156,7 @@ class _ChangeeducationnState extends State<Changeeducationn> {
                   Padding(
                     padding: const EdgeInsets.only(left: 22, top: 20),
                     child: Text(
-                      'Field of study',
+                      'Start date',
                       style: GoogleFonts.dmSans(
                           fontWeight: FontWeight.w700,
                           fontSize: 12,
@@ -139,20 +167,26 @@ class _ChangeeducationnState extends State<Changeeducationn> {
                     padding:
                         const EdgeInsets.only(left: 22, right: 20, top: 10),
                     child: Container(
-                        width: 160,
-                        height: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Color(0xffD3D1D1FF), blurRadius: 18)
-                            ]),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                          ),
-                        )),
+                      width: 160,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Color(0xffD3D1D1FF), blurRadius: 18)
+                          ]),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20, top: 10),
+                        child: Text(
+                          'Sep 2010',
+                          style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: Color(0xff524B6B)),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -162,7 +196,7 @@ class _ChangeeducationnState extends State<Changeeducationn> {
                   Padding(
                     padding: const EdgeInsets.only(left: 5, top: 20),
                     child: Text(
-                      'Field of study',
+                      'End date',
                       style: GoogleFonts.dmSans(
                           fontWeight: FontWeight.w700,
                           fontSize: 12,
@@ -172,20 +206,26 @@ class _ChangeeducationnState extends State<Changeeducationn> {
                   Padding(
                     padding: const EdgeInsets.only(left: 5, right: 20, top: 10),
                     child: Container(
-                        width: 160,
-                        height: 40,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(8),
-                            color: Colors.white,
-                            boxShadow: [
-                              BoxShadow(
-                                  color: Color(0xffD3D1D1FF), blurRadius: 18)
-                            ]),
-                        child: TextField(
-                          decoration: InputDecoration(
-                            border: InputBorder.none,
-                          ),
-                        )),
+                      width: 160,
+                      height: 40,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Colors.white,
+                          boxShadow: [
+                            BoxShadow(
+                                color: Color(0xffD3D1D1FF), blurRadius: 18)
+                          ]),
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 20, top: 10),
+                        child: Text(
+                          'Aug 2013',
+                          style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w400,
+                              fontSize: 12,
+                              color: Color(0xff524B6B)),
+                        ),
+                      ),
+                    ),
                   ),
                 ],
               )
@@ -201,6 +241,10 @@ class _ChangeeducationnState extends State<Changeeducationn> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(6),
                       color: Colors.white),
+                  child: Icon(
+                    Icons.check,
+                    size: 15,
+                  ),
                 ),
                 Text(
                   '     This is my position now',
@@ -246,12 +290,15 @@ class _ChangeeducationnState extends State<Changeeducationn> {
           ),
 
           Padding(
-            padding: const EdgeInsets.only(top: 20, left: 25, right: 25),
-            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            padding:
+                const EdgeInsets.only(top: 20, left: 25, right: 25, bottom: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                InkWell(onTap:(){
-                  click();
-    },
+                InkWell(
+                  onTap: () {
+                    click();
+                  },
                   child: Container(
                     width: 160,
                     height: 50,
@@ -269,19 +316,24 @@ class _ChangeeducationnState extends State<Changeeducationn> {
                     ),
                   ),
                 ),
-                Container(
-                  width: 160,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Color(0xff130160)),
-                  child: Center(
-                    child: Text(
-                      'SAVE',
-                      style: GoogleFonts.dmSans(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 14,
-                          color: Colors.white),
+                InkWell(
+                  onTap: () {
+                    return changee();
+                  },
+                  child: Container(
+                    width: 160,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(8),
+                        color: Color(0xff130160)),
+                    child: Center(
+                      child: Text(
+                        'SAVE',
+                        style: GoogleFonts.dmSans(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 14,
+                            color: Colors.white),
+                      ),
                     ),
                   ),
                 ),
@@ -301,7 +353,7 @@ class _ChangeeducationnState extends State<Changeeducationn> {
       builder: (context) {
         return Container(
           height: 303,
-          width: 400,
+          width: double.infinity,
           child: Padding(
             padding: const EdgeInsets.only(top: 20),
             child: Column(
@@ -335,38 +387,150 @@ class _ChangeeducationnState extends State<Changeeducationn> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 40),
-                  child: Container(
-                    width: 340,
-                    height: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Color(0xff130160)),
-                    child: Center(
-                      child: Text(
-                        'CONTINUE FILLING',
-                        style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 14,
-                            color: Colors.white),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(
+                        builder: (context) {
+                          return Editprofilee();
+                        },
+                      ));
+                    },
+                    child: Container(
+                      width: 340,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Color(0xff130160)),
+                      child: Center(
+                        child: Text(
+                          'CONTINUE FILLING',
+                          style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 14,
+                              color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 10),
-                  child: Container(
-                    width: 340,
-                    height: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Color(0XFFD6CDFE)),
-                    child: Center(
-                      child: Text(
-                        'UNDO CHANGES',
-                        style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 14,
-                            color: Colors.white),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      width: 340,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Color(0XFFD6CDFE)),
+                      child: Center(
+                        child: Text(
+                          'UNDO CHANGES',
+                          style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 14,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  void changee() async {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) {
+        return Container(
+          height: 303,
+          width: double.infinity,
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: Column(
+              children: [
+                Container(
+                  width: 35,
+                  height: 4,
+                  decoration: BoxDecoration(
+                      color: Color(0xff5B5858),
+                      borderRadius: BorderRadius.circular(50)),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: Text(
+                    'Undo Changes ?',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w700,
+                        fontSize: 16,
+                        color: Color(0xff150B3D)),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Text(
+                    'Are you sure you want to delete this education?',
+                    style: GoogleFonts.dmSans(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 12,
+                        color: Color(0xff524B6B)),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pushReplacement(context, MaterialPageRoute(
+                        builder: (context) {
+                          return Editprofilee();
+                        },
+                      ));
+                    },
+                    child: Container(
+                      width: 340,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Color(0xff130160)),
+                      child: Center(
+                        child: Text(
+                          'CONTINUE FILLING',
+                          style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 14,
+                              color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: Container(
+                      width: 340,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Color(0XFFD6CDFE)),
+                      child: Center(
+                        child: Text(
+                          'UNDO CHANGES',
+                          style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 14,
+                              color: Colors.white),
+                        ),
                       ),
                     ),
                   ),

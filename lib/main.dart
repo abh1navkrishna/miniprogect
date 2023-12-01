@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:jobspot/Edit%20appreciation.dart';
 import 'package:jobspot/about%20as.dart';
 import 'package:jobspot/aboutme.dart';
+import 'package:jobspot/add%20appreciation.dart';
 import 'package:jobspot/add%20education.dart';
+import 'package:jobspot/add%20language.dart';
+import 'package:jobspot/add%20resume.dart';
+import 'package:jobspot/add%20skill%202.dart';
+import 'package:jobspot/add%20skill.dart';
 import 'package:jobspot/addajob.dart';
 import 'package:jobspot/addpost.dart';
 import 'package:jobspot/change%20education.dart';
 import 'package:jobspot/checkemail.dart';
 import 'package:jobspot/company.dart';
+import 'package:jobspot/create%20job%20or%20post.dart';
 import 'package:jobspot/dicription.dart';
 import 'package:jobspot/edit%20profile.dart';
 import 'package:jobspot/editaddajob.dart';
@@ -14,26 +21,37 @@ import 'package:jobspot/field%20of%20study.dart';
 import 'package:jobspot/filter.dart';
 import 'package:jobspot/forgotpassword.dart';
 import 'package:jobspot/home%20screen.dart';
+import 'package:jobspot/job%20company.dart';
 import 'package:jobspot/job%20position.dart';
+import 'package:jobspot/jobs.dart';
 import 'package:jobspot/language.dart';
 import 'package:jobspot/level%20of%20education.dart';
 import 'package:jobspot/login.dart';
 import 'package:jobspot/message.dart';
 import 'package:jobspot/my%20connection.dart';
+import 'package:jobspot/my%20profile%20v1.dart';
 import 'package:jobspot/noresult.dart';
 import 'package:jobspot/nosavings.dart';
 import 'package:jobspot/notifications.dart';
+import 'package:jobspot/post.dart';
 import 'package:jobspot/posting.dart';
 import 'package:jobspot/profile.dart';
 import 'package:jobspot/save%20job.dart';
 import 'package:jobspot/search%20language.dart';
 import 'package:jobspot/search.dart';
+import 'package:jobspot/settings.dart';
+import 'package:jobspot/shared%20a%20job.dart';
 import 'package:jobspot/signup.dart';
+import 'package:jobspot/skill%208.dart';
 import 'package:jobspot/spashscreen.dart';
 import 'package:jobspot/specialization.dart';
+import 'package:jobspot/splash.dart';
 import 'package:jobspot/successfully.dart';
+import 'package:jobspot/tabbar.dart';
+import 'package:jobspot/update%20password.dart';
 import 'package:jobspot/upload%20cv.dart';
 
+import 'bottom navigation bar.dart';
 import 'institute name.dart';
 
 void main() {
@@ -47,6 +65,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -67,7 +86,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const Searchlanguagee()
+      home: const Splashhh()
     );
   }
 }

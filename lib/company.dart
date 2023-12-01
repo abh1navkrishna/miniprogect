@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:jobspot/dicription.dart';
+import 'package:jobspot/upload%20cv.dart';
 
 class Companyy extends StatefulWidget {
   const Companyy({super.key});
@@ -12,12 +14,15 @@ class _CompanyyState extends State<Companyy> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+
+      backgroundColor: Color(0xffF9F9F9),
       appBar: AppBar(
+        backgroundColor: Color(0xffF9F9F9),
+
         title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Icon(Icons.arrow_back),
+            // Icon(Icons.arrow_back),
             Icon(Icons.more_vert),
           ],
         ),
@@ -35,26 +40,32 @@ class _CompanyyState extends State<Companyy> {
                 ),
                 Padding(
                   padding: const EdgeInsets.only(left: 20),
-                  child: Container(
-                    width: 270,
-                    height: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(8),
-                        color: Color(0xff130160)),
-                    child: Center(
-                      child: Text(
-                        'APPLY NOW',
-                        style: GoogleFonts.dmSans(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 14,
-                            color: Colors.white),
+                  child: InkWell(onTap: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      return Uploadcvv();
+                    },));
+                  },
+                    child: Container(
+                      width: 270,
+                      height: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(8),
+                          color: Color(0xff130160)),
+                      child: Center(
+                        child: Text(
+                          'APPLY NOW',
+                          style: GoogleFonts.dmSans(
+                              fontWeight: FontWeight.w700,
+                              fontSize: 14,
+                              color: Colors.white),
+                        ),
                       ),
                     ),
                   ),
                 ),
               ],
             ),
-          )),
+          ),surfaceTintColor: Colors.white),
 
       //======================================================================================================
 
@@ -137,19 +148,25 @@ class _CompanyyState extends State<Companyy> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  width: 165,
-                  height: 40,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(7),
-                      color: Color(0xff130160)),
-                  child: Center(
-                    child: Text(
-                      'Description',
-                      style: GoogleFonts.dmSans(
-                          fontWeight: FontWeight.w700,
-                          fontSize: 14,
-                          color: Colors.white),
+                InkWell(onTap: () {
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+                    return Descriptionn();
+                  },));
+                },
+                  child: Container(
+                    width: 165,
+                    height: 40,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(7),
+                        color: Color(0xff130160)),
+                    child: Center(
+                      child: Text(
+                        'Description',
+                        style: GoogleFonts.dmSans(
+                            fontWeight: FontWeight.w700,
+                            fontSize: 14,
+                            color: Colors.white),
+                      ),
                     ),
                   ),
                 ),

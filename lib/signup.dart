@@ -12,6 +12,16 @@ class Signupp extends StatefulWidget {
 }
 
 class _SignuppState extends State<Signupp> {
+
+
+  TextEditingController _email=TextEditingController();
+  TextEditingController _password=TextEditingController();
+  TextEditingController _fullname=TextEditingController();
+
+  final SnackBar _snackBar=const SnackBar(content: Text("Sign up Failed"),
+    duration: Duration(seconds: 3),);
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,24 +29,32 @@ class _SignuppState extends State<Signupp> {
       body: ListView(
         children: [
           Padding(
-            padding: const EdgeInsets.only(top: 30, left: 53),
-            child: Text(
-              'Create an Accound',
-              style:
-                  GoogleFonts.dmSans(fontWeight: FontWeight.w700, fontSize: 30),
+            padding: const EdgeInsets.only(top: 75),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Create an Account',
+                  style: GoogleFonts.dmSans(
+                      fontWeight: FontWeight.w700, fontSize: 30),
+                ),
+              ],
             ),
           ),
-
           //============================================================================================================
 
-          Text(
-            '              Lorem ipsum dolor sit amet, consectetur adipiscing \n                                  elit, sed do eiusmod tempor',
-            style: GoogleFonts.dmSans(
-                fontWeight: FontWeight.w400,
-                fontSize: 12,
-                color: Color(0xff524B6B)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                ' Lorem ipsum dolor sit amet, consectetur adipiscing\n                     elit, sed do eiusmod tempor',
+                style: GoogleFonts.dmSans(
+                    fontWeight: FontWeight.w400,
+                    fontSize: 12,
+                    color: Color(0xff524B6B)),
+              ),
+            ],
           ),
-
           //============================================================================================================
 
           Padding(
@@ -59,6 +77,7 @@ class _SignuppState extends State<Signupp> {
                 color: Colors.white,
               ),
               child: TextField(
+                controller: _fullname,
                 decoration: InputDecoration(
                   border: InputBorder.none,
                 ),
@@ -88,6 +107,7 @@ class _SignuppState extends State<Signupp> {
                 color: Colors.white,
               ),
               child: TextField(
+                controller: _email,
                 decoration: InputDecoration(
                   border: InputBorder.none,
                 ),
@@ -108,51 +128,51 @@ class _SignuppState extends State<Signupp> {
             ),
           ),
           Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
-              child: Stack(
-                children: [
-                  Container(
-                    width: 350,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(8),
-                      color: Colors.white,
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 310, top: 13),
-                    child: Image.asset('assets/Icon eye.png'),
-                  )
-                ],
-              )),
+            padding: const EdgeInsets.only(left: 20,right: 20,top: 20),
+            child: Container(
+              width: double.infinity,
+              height: 50,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8),
+                color: Colors.white,
+              ),
+              child: TextField(
+                controller: _password,
+                decoration: InputDecoration(
+                    border: InputBorder.none,
+                    suffixIcon: ImageIcon(AssetImage('assets/Icon eye.png'))
+                ),
+              ),
+            ),
+          ),
 
           //====================================================================================================================
 
           Padding(
-            padding: const EdgeInsets.only(left: 20, top: 20),
-            child: Row(
+            padding: const EdgeInsets.only(left: 20,right: 20,top: 20),
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
-                  width: 35,
-                  height: 35,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Color(0xffE6E1FF)),
+                Row(
+                  children: [
+                    Container(
+                      width: 35,
+                      height: 35,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: Color(0xffE6E1FF)),
+                    ),
+                    Text(
+                      '  Remember me',
+                      style: GoogleFonts.dmSans(
+                          fontWeight: FontWeight.w400,
+                          fontSize: 13,
+                          color: Color(0xffAAA6B9)),
+                    ),
+                  ],
                 ),
-                Text(
-                  '  Remember me',
-                  style: GoogleFonts.dmSans(
-                      fontWeight: FontWeight.w400,
-                      fontSize: 13,
-                      color: Color(0xffAAA6B9)),
-                ),
+
                 Padding(
-                  padding: const EdgeInsets.only(left: 110),
+                  padding: const EdgeInsets.only(left: 0),
                   child: InkWell(
                     onTap: () {
                       Navigator.push(context, MaterialPageRoute(
@@ -162,7 +182,7 @@ class _SignuppState extends State<Signupp> {
                       ));
                     },
                     child: Text(
-                      'Forgot Password',
+                      'Forgot Password ?',
                       style: GoogleFonts.dmSans(
                           fontWeight: FontWeight.w400,
                           fontSize: 13,
@@ -180,14 +200,14 @@ class _SignuppState extends State<Signupp> {
             padding: const EdgeInsets.only(top: 30, left: 64, right: 64),
             child: InkWell(
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(
+                Navigator.pushReplacement(context, MaterialPageRoute(
                   builder: (context) {
                     return Loginn();
                   },
                 ));
               },
               child: Container(
-                width: 300,
+                width: double.infinity,
                 height: 53,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7),
@@ -209,45 +229,40 @@ class _SignuppState extends State<Signupp> {
             child: Image.asset('assets/Sign up with Google2.png'),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 67),
-            child: Row(
-              children: [
-                Text(
-                  "You don't have an account yet?",
+            padding: const EdgeInsets.only(top: 10),
+            child: Image.asset('assets/Sign in with Google.png'),
+          ),
+          Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "You don't have an account yet?",
+                style: GoogleFonts.dmSans(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w400,
+                    color: Color(0xff524B6B)),
+              ),
+              TextButton(
+                onPressed: () {
+                  _email.text!.isNotEmpty&&_password.text.isNotEmpty&&_fullname.text.isNotEmpty?
+
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) {
+                      return Signupp();
+                    },
+                  )):
+                  ScaffoldMessenger.of(context).showSnackBar(_snackBar);
+                },
+                child: Text(
+                  "Sign up",
                   style: GoogleFonts.dmSans(
                       fontSize: 13,
                       fontWeight: FontWeight.w400,
-                      color: Color(0xff524B6B)),
+                      decoration: TextDecoration.underline,
+                      decorationColor: Color(0xffFF9228),
+                      color: Color(0xffFF9228)),
                 ),
-                InkWell(
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(
-                      builder: (context) {
-                        return Signupp();
-                      },
-                    ));
-                  },
-                  child: TextButton(
-                    onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(
-                        builder: (context) {
-                          return Signupp();
-                        },
-                      ));
-                    },
-                    child: Text(
-                      "Sign up",
-                      style: GoogleFonts.dmSans(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w400,
-                          decoration: TextDecoration.underline,
-                          decorationColor: Color(0xffFF9228),
-                          color: Color(0xffFF9228)),
-                    ),
-                  ),
-                )
-              ],
-            ),
+              )
+            ],
           ),
         ],
       ),
