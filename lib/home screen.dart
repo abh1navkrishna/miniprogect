@@ -229,7 +229,7 @@ class _HomescreennState extends State<Homescreenn> {
         Padding(
           padding: const EdgeInsets.only(top: 20, left: 20),
           child: Text(
-            'Full Time',
+            'Recent Job List',
             style: GoogleFonts.dmSans(
                 fontWeight: FontWeight.w700,
                 fontSize: 16,
